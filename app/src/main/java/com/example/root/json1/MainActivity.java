@@ -85,8 +85,8 @@ public class MainActivity extends AppCompatActivity {
                         contact.put("name", name);
                         contact.put("email", email);
                         contact.put("mobile", mobile);
+                        contact.put("address",address);
 
-                        // adding contact to contact list
                         contactList.add(contact);
                     }
                 } catch (final JSONException e) {
@@ -129,8 +129,8 @@ public class MainActivity extends AppCompatActivity {
             ListAdapter adapter = new SimpleAdapter(
                     MainActivity.this, contactList,
                     R.layout.list_item, new String[]{"name", "email",
-                    "mobile"}, new int[]{R.id.name,
-                    R.id.email, R.id.mobile});
+                    "mobile","address"}, new int[]{R.id.name,
+                    R.id.email, R.id.mobile,R.id.address});
 
             lv.setAdapter(adapter);
         }
